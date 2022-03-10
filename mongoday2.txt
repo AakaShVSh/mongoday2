@@ -1,0 +1,2149 @@
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("c0639161-9070-4240-bf6a-5fee8b2eb2ab") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-03-09T10:12:57.454+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin   0.000GB
+config  0.000GB
+data    0.000GB
+local   0.000GB
+> use data
+switched to db data
+> show collectons
+uncaught exception: Error: don't know how to show [collectons] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> show collections
+data
+fetchdata
+movie
+> db.movie.find({}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f7"),
+        "Title" : "Soul Food",
+        "Type" : "Drama",
+        "Country" : "Mexico",
+        "Year" : 2002,
+        "Money" : "$12841.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fc"),
+        "Title" : "Carnegie Hall",
+        "Type" : "Drama",
+        "Country" : "Portugal",
+        "Year" : 2007,
+        "Money" : "$15366.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fe"),
+        "Title" : "Dragonball Evolution",
+        "Type" : "Action|Adventure|Fantasy|Sci-Fi",
+        "Country" : "Liberia",
+        "Year" : 1993,
+        "Money" : "$18906.76"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90900"),
+        "Title" : "Young & Beautiful",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$18052.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90901"),
+        "Title" : "Leaving Normal",
+        "Type" : "Comedy|Drama",
+        "Country" : "Russia",
+        "Year" : 1996,
+        "Money" : "$18440.72"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90902"),
+        "Title" : "Fade To Black",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17886.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90903"),
+        "Title" : "Sweet Bird of Youth",
+        "Type" : "Drama",
+        "Country" : "Japan",
+        "Year" : 1995,
+        "Money" : "$18941.16"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90904"),
+        "Title" : "Jay and Silent Bob Strike Back",
+        "Type" : "Adventure|Comedy",
+        "Country" : "China",
+        "Year" : 2008,
+        "Money" : "$11432.29"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90907"),
+        "Title" : "101 Dalmatians II: Patch's London Adventure",
+        "Type" : "Animation|Children",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$14715.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90909"),
+        "Title" : "Fury",
+        "Type" : "Action|Drama|War",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17248.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+Type "it" for more
+> db.movie.find({Money:{$gt:{"$18000"}}}).pretty()
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:35
+> db.movie.find({Money:{$gt:"$18000"}}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fe"),
+        "Title" : "Dragonball Evolution",
+        "Type" : "Action|Adventure|Fantasy|Sci-Fi",
+        "Country" : "Liberia",
+        "Year" : 1993,
+        "Money" : "$18906.76"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90900"),
+        "Title" : "Young & Beautiful",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$18052.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90901"),
+        "Title" : "Leaving Normal",
+        "Type" : "Comedy|Drama",
+        "Country" : "Russia",
+        "Year" : 1996,
+        "Money" : "$18440.72"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90903"),
+        "Title" : "Sweet Bird of Youth",
+        "Type" : "Drama",
+        "Country" : "Japan",
+        "Year" : 1995,
+        "Money" : "$18941.16"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090b"),
+        "Title" : "The Boy",
+        "Type" : "(no genres listed)",
+        "Country" : "Colombia",
+        "Year" : 1994,
+        "Money" : "$19660.64"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090e"),
+        "Title" : "Tarnation",
+        "Type" : "Documentary",
+        "Country" : "Indonesia",
+        "Year" : 2006,
+        "Money" : "$18580.07"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90910"),
+        "Title" : "These Final Hours",
+        "Type" : "Drama|Thriller",
+        "Country" : "China",
+        "Year" : 2011,
+        "Money" : "$18917.21"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90911"),
+        "Title" : "Oxy-Morons",
+        "Type" : "Crime|Drama",
+        "Country" : "Indonesia",
+        "Year" : 2005,
+        "Money" : "$19360.91"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90916"),
+        "Title" : "Black God, White Devil (Deus e o Diabo na Terra do Sol)",
+        "Type" : "Adventure|Crime|Drama|Western",
+        "Country" : "Indonesia",
+        "Year" : 2004,
+        "Money" : "$18591.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90917"),
+        "Title" : "Run If You Can",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1995,
+        "Money" : "$9348.33"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091b"),
+        "Title" : "Miss Météo",
+        "Type" : "Comedy|Drama",
+        "Country" : "China",
+        "Year" : 2003,
+        "Money" : "$18948.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90921"),
+        "Title" : "Halloween III: Season of the Witch",
+        "Type" : "Horror",
+        "Country" : "Ukraine",
+        "Year" : 1963,
+        "Money" : "$18003.53"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90922"),
+        "Title" : "Desirée",
+        "Type" : "Drama|Romance",
+        "Country" : "Thailand",
+        "Year" : 2012,
+        "Money" : "$19486.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092c"),
+        "Title" : "Beer Wars",
+        "Type" : "Documentary",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9353.90"
+}
+Type "it" for more
+> db.movie.find({Money:{$lt:"$18000"}}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f7"),
+        "Title" : "Soul Food",
+        "Type" : "Drama",
+        "Country" : "Mexico",
+        "Year" : 2002,
+        "Money" : "$12841.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fc"),
+        "Title" : "Carnegie Hall",
+        "Type" : "Drama",
+        "Country" : "Portugal",
+        "Year" : 2007,
+        "Money" : "$15366.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90902"),
+        "Title" : "Fade To Black",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17886.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90904"),
+        "Title" : "Jay and Silent Bob Strike Back",
+        "Type" : "Adventure|Comedy",
+        "Country" : "China",
+        "Year" : 2008,
+        "Money" : "$11432.29"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90907"),
+        "Title" : "101 Dalmatians II: Patch's London Adventure",
+        "Type" : "Animation|Children",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$14715.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90909"),
+        "Title" : "Fury",
+        "Type" : "Action|Drama|War",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17248.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090c"),
+        "Title" : "One of Our Dinosaurs Is Missing",
+        "Type" : "Adventure|Comedy",
+        "Country" : "Guinea-Bissau",
+        "Year" : 1999,
+        "Money" : "$17009.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090d"),
+        "Title" : "Rabbit à la Berlin (Królik po berlinsku)",
+        "Type" : "Documentary|War",
+        "Country" : "North Korea",
+        "Year" : 2004,
+        "Money" : "$15769.55"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090f"),
+        "Title" : "East of Eden",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 1999,
+        "Money" : "$13252.01"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90912"),
+        "Title" : "In Old California",
+        "Type" : "Western",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$11319.31"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90913"),
+        "Title" : "Safe Conduct (Laissez-Passer)",
+        "Type" : "Drama|War",
+        "Country" : "Ireland",
+        "Year" : 2005,
+        "Money" : "$17137.35"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90914"),
+        "Title" : "Mating of Millie, The",
+        "Type" : "Comedy|Romance",
+        "Country" : "China",
+        "Year" : 1985,
+        "Money" : "$17039.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90915"),
+        "Title" : "Can't Buy Me Love",
+        "Type" : "Comedy|Romance",
+        "Country" : "Iran",
+        "Year" : 1985,
+        "Money" : "$16336.11"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90918"),
+        "Title" : "Dreaming of Joseph Lees",
+        "Type" : "Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1981,
+        "Money" : "$14335.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90919"),
+        "Title" : "Other Sister, The",
+        "Type" : "Comedy|Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1976,
+        "Money" : "$15058.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091a"),
+        "Title" : "7th Heaven (Seventh Heaven)",
+        "Type" : "Drama|Romance",
+        "Country" : "Kazakhstan",
+        "Year" : 1996,
+        "Money" : "$17269.99"
+}
+Type "it" for more
+> db.movie.find({$end:[{Year:{$gt:2000}},{Money:{$gt:"$18000"}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $end. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movie.find({$and:[{Year:{$gt:2000}},{Money:{$gt:"$18000"}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090e"),
+        "Title" : "Tarnation",
+        "Type" : "Documentary",
+        "Country" : "Indonesia",
+        "Year" : 2006,
+        "Money" : "$18580.07"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90910"),
+        "Title" : "These Final Hours",
+        "Type" : "Drama|Thriller",
+        "Country" : "China",
+        "Year" : 2011,
+        "Money" : "$18917.21"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90911"),
+        "Title" : "Oxy-Morons",
+        "Type" : "Crime|Drama",
+        "Country" : "Indonesia",
+        "Year" : 2005,
+        "Money" : "$19360.91"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90916"),
+        "Title" : "Black God, White Devil (Deus e o Diabo na Terra do Sol)",
+        "Type" : "Adventure|Crime|Drama|Western",
+        "Country" : "Indonesia",
+        "Year" : 2004,
+        "Money" : "$18591.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091b"),
+        "Title" : "Miss Météo",
+        "Type" : "Comedy|Drama",
+        "Country" : "China",
+        "Year" : 2003,
+        "Money" : "$18948.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90922"),
+        "Title" : "Desirée",
+        "Type" : "Drama|Romance",
+        "Country" : "Thailand",
+        "Year" : 2012,
+        "Money" : "$19486.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092c"),
+        "Title" : "Beer Wars",
+        "Type" : "Documentary",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9353.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092d"),
+        "Title" : "Taming of the Shrew, The",
+        "Type" : "Comedy",
+        "Country" : "Poland",
+        "Year" : 2008,
+        "Money" : "$18169.22"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90936"),
+        "Title" : "Diary of Anne Frank, The",
+        "Type" : "Drama|War",
+        "Country" : "Honduras",
+        "Year" : 2009,
+        "Money" : "$18106.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90949"),
+        "Title" : "The Virginian",
+        "Type" : "Romance|Western",
+        "Country" : "China",
+        "Year" : 2011,
+        "Money" : "$19360.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9094e"),
+        "Title" : "Toy, The",
+        "Type" : "Comedy",
+        "Country" : "Indonesia",
+        "Year" : 2011,
+        "Money" : "$9118.87"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90952"),
+        "Title" : "Funny Ha Ha",
+        "Type" : "Comedy|Drama",
+        "Country" : "Colombia",
+        "Year" : 2010,
+        "Money" : "$9904.18"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90955"),
+        "Title" : "Operation Pacific",
+        "Type" : "Drama|War",
+        "Country" : "Portugal",
+        "Year" : 2012,
+        "Money" : "$19400.61"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9095b"),
+        "Title" : "Spellbound",
+        "Type" : "Mystery|Romance|Thriller",
+        "Country" : "Brazil",
+        "Year" : 2007,
+        "Money" : "$9490.37"
+}
+Type "it" for more
+> db.movie.find({$or:[{Year:{$gt:2000}},{Money:{$gt:"$18000"}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f7"),
+        "Title" : "Soul Food",
+        "Type" : "Drama",
+        "Country" : "Mexico",
+        "Year" : 2002,
+        "Money" : "$12841.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fc"),
+        "Title" : "Carnegie Hall",
+        "Type" : "Drama",
+        "Country" : "Portugal",
+        "Year" : 2007,
+        "Money" : "$15366.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fe"),
+        "Title" : "Dragonball Evolution",
+        "Type" : "Action|Adventure|Fantasy|Sci-Fi",
+        "Country" : "Liberia",
+        "Year" : 1993,
+        "Money" : "$18906.76"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90900"),
+        "Title" : "Young & Beautiful",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$18052.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90901"),
+        "Title" : "Leaving Normal",
+        "Type" : "Comedy|Drama",
+        "Country" : "Russia",
+        "Year" : 1996,
+        "Money" : "$18440.72"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90902"),
+        "Title" : "Fade To Black",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17886.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90903"),
+        "Title" : "Sweet Bird of Youth",
+        "Type" : "Drama",
+        "Country" : "Japan",
+        "Year" : 1995,
+        "Money" : "$18941.16"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90904"),
+        "Title" : "Jay and Silent Bob Strike Back",
+        "Type" : "Adventure|Comedy",
+        "Country" : "China",
+        "Year" : 2008,
+        "Money" : "$11432.29"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90907"),
+        "Title" : "101 Dalmatians II: Patch's London Adventure",
+        "Type" : "Animation|Children",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$14715.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90909"),
+        "Title" : "Fury",
+        "Type" : "Action|Drama|War",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17248.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090b"),
+        "Title" : "The Boy",
+        "Type" : "(no genres listed)",
+        "Country" : "Colombia",
+        "Year" : 1994,
+        "Money" : "$19660.64"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090d"),
+        "Title" : "Rabbit à la Berlin (Królik po berlinsku)",
+        "Type" : "Documentary|War",
+        "Country" : "North Korea",
+        "Year" : 2004,
+        "Money" : "$15769.55"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090e"),
+        "Title" : "Tarnation",
+        "Type" : "Documentary",
+        "Country" : "Indonesia",
+        "Year" : 2006,
+        "Money" : "$18580.07"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90910"),
+        "Title" : "These Final Hours",
+        "Type" : "Drama|Thriller",
+        "Country" : "China",
+        "Year" : 2011,
+        "Money" : "$18917.21"
+}
+Type "it" for more
+> db.movie.find({$nor:[{Year:{$gt:2000}},{Money:{$gt:"$10000"}}]}).pretty()
+> db.movie.find({$nor:[{Year:{$gt:2000}},{Money:{$gt:"$10000"}}]}).pretty()
+> db.movie.find({Year:{$gt:2000}},{$nor:{Money:{$gt:"$10000"}}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "FieldPath field names may not start with '$'. Consider using $getField or $setField.",
+        "code" : 16410,
+        "codeName" : "Location16410"
+}
+> db.movie.find({Year:{$lt:2000}},{$nor:{Money:{$gt:"$10000"}}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "FieldPath field names may not start with '$'. Consider using $getField or $setField.",
+        "code" : 16410,
+        "codeName" : "Location16410"
+}
+> db.movie.find({$nor:[{Year:{$gt:2000}},{Money:{$gt:"$10000"}}]}).pretty()
+> db.movie.find({$nor:[{Year:{$gt:2000}},{Money:{$gt:"$1000"}}]}).pretty()
+> db.movie.find({$and:[{Year:{$lt:2000}},{Money:{$lt:"$10000"}}]}).pretty()
+> db.movie.find({}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f7"),
+        "Title" : "Soul Food",
+        "Type" : "Drama",
+        "Country" : "Mexico",
+        "Year" : 2002,
+        "Money" : "$12841.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fc"),
+        "Title" : "Carnegie Hall",
+        "Type" : "Drama",
+        "Country" : "Portugal",
+        "Year" : 2007,
+        "Money" : "$15366.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fe"),
+        "Title" : "Dragonball Evolution",
+        "Type" : "Action|Adventure|Fantasy|Sci-Fi",
+        "Country" : "Liberia",
+        "Year" : 1993,
+        "Money" : "$18906.76"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90900"),
+        "Title" : "Young & Beautiful",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$18052.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90901"),
+        "Title" : "Leaving Normal",
+        "Type" : "Comedy|Drama",
+        "Country" : "Russia",
+        "Year" : 1996,
+        "Money" : "$18440.72"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90902"),
+        "Title" : "Fade To Black",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17886.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90903"),
+        "Title" : "Sweet Bird of Youth",
+        "Type" : "Drama",
+        "Country" : "Japan",
+        "Year" : 1995,
+        "Money" : "$18941.16"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90904"),
+        "Title" : "Jay and Silent Bob Strike Back",
+        "Type" : "Adventure|Comedy",
+        "Country" : "China",
+        "Year" : 2008,
+        "Money" : "$11432.29"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90907"),
+        "Title" : "101 Dalmatians II: Patch's London Adventure",
+        "Type" : "Animation|Children",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$14715.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90909"),
+        "Title" : "Fury",
+        "Type" : "Action|Drama|War",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17248.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+Type "it" for more
+> db.movie.find({$and:[{Year:{$lt:2009}},{Money:{$lt:"$10000"}}]}).pretty()
+>
+> db.movie.find({$and:[{Year:{$lt:2012}},{Money:{$lt:"$1000"}}]}).pretty()
+>
+>
+> db.movie.find({$and:[{Year:{$gt:2000}},{Money:{$gt:"$18000"}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090e"),
+        "Title" : "Tarnation",
+        "Type" : "Documentary",
+        "Country" : "Indonesia",
+        "Year" : 2006,
+        "Money" : "$18580.07"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90910"),
+        "Title" : "These Final Hours",
+        "Type" : "Drama|Thriller",
+        "Country" : "China",
+        "Year" : 2011,
+        "Money" : "$18917.21"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90911"),
+        "Title" : "Oxy-Morons",
+        "Type" : "Crime|Drama",
+        "Country" : "Indonesia",
+        "Year" : 2005,
+        "Money" : "$19360.91"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90916"),
+        "Title" : "Black God, White Devil (Deus e o Diabo na Terra do Sol)",
+        "Type" : "Adventure|Crime|Drama|Western",
+        "Country" : "Indonesia",
+        "Year" : 2004,
+        "Money" : "$18591.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091b"),
+        "Title" : "Miss Météo",
+        "Type" : "Comedy|Drama",
+        "Country" : "China",
+        "Year" : 2003,
+        "Money" : "$18948.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90922"),
+        "Title" : "Desirée",
+        "Type" : "Drama|Romance",
+        "Country" : "Thailand",
+        "Year" : 2012,
+        "Money" : "$19486.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092c"),
+        "Title" : "Beer Wars",
+        "Type" : "Documentary",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9353.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092d"),
+        "Title" : "Taming of the Shrew, The",
+        "Type" : "Comedy",
+        "Country" : "Poland",
+        "Year" : 2008,
+        "Money" : "$18169.22"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90936"),
+        "Title" : "Diary of Anne Frank, The",
+        "Type" : "Drama|War",
+        "Country" : "Honduras",
+        "Year" : 2009,
+        "Money" : "$18106.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90949"),
+        "Title" : "The Virginian",
+        "Type" : "Romance|Western",
+        "Country" : "China",
+        "Year" : 2011,
+        "Money" : "$19360.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9094e"),
+        "Title" : "Toy, The",
+        "Type" : "Comedy",
+        "Country" : "Indonesia",
+        "Year" : 2011,
+        "Money" : "$9118.87"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90952"),
+        "Title" : "Funny Ha Ha",
+        "Type" : "Comedy|Drama",
+        "Country" : "Colombia",
+        "Year" : 2010,
+        "Money" : "$9904.18"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90955"),
+        "Title" : "Operation Pacific",
+        "Type" : "Drama|War",
+        "Country" : "Portugal",
+        "Year" : 2012,
+        "Money" : "$19400.61"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9095b"),
+        "Title" : "Spellbound",
+        "Type" : "Mystery|Romance|Thriller",
+        "Country" : "Brazil",
+        "Year" : 2007,
+        "Money" : "$9490.37"
+}
+Type "it" for more
+> db.movie.find({$and:[{Year:{$lt:2000}},{Money:{$lt:"$18000"}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090c"),
+        "Title" : "One of Our Dinosaurs Is Missing",
+        "Type" : "Adventure|Comedy",
+        "Country" : "Guinea-Bissau",
+        "Year" : 1999,
+        "Money" : "$17009.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090f"),
+        "Title" : "East of Eden",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 1999,
+        "Money" : "$13252.01"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90914"),
+        "Title" : "Mating of Millie, The",
+        "Type" : "Comedy|Romance",
+        "Country" : "China",
+        "Year" : 1985,
+        "Money" : "$17039.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90915"),
+        "Title" : "Can't Buy Me Love",
+        "Type" : "Comedy|Romance",
+        "Country" : "Iran",
+        "Year" : 1985,
+        "Money" : "$16336.11"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90918"),
+        "Title" : "Dreaming of Joseph Lees",
+        "Type" : "Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1981,
+        "Money" : "$14335.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90919"),
+        "Title" : "Other Sister, The",
+        "Type" : "Comedy|Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1976,
+        "Money" : "$15058.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091a"),
+        "Title" : "7th Heaven (Seventh Heaven)",
+        "Type" : "Drama|Romance",
+        "Country" : "Kazakhstan",
+        "Year" : 1996,
+        "Money" : "$17269.99"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091c"),
+        "Title" : "Anita",
+        "Type" : "Documentary",
+        "Country" : "Saudi Arabia",
+        "Year" : 1997,
+        "Money" : "$14487.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091d"),
+        "Title" : "Pretty Woman",
+        "Type" : "Comedy|Romance",
+        "Country" : "Indonesia",
+        "Year" : 1994,
+        "Money" : "$15496.89"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90920"),
+        "Title" : "Escape from Planet Earth",
+        "Type" : "Adventure|Animation|Comedy|Sci-Fi",
+        "Country" : "France",
+        "Year" : 1995,
+        "Money" : "$14696.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90923"),
+        "Title" : "It's the Easter Beagle, Charlie Brown!",
+        "Type" : "Animation|Children|Comedy",
+        "Country" : "Cambodia",
+        "Year" : 1995,
+        "Money" : "$15813.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90926"),
+        "Title" : "The Italian Connection",
+        "Type" : "Crime|Drama",
+        "Country" : "Brazil",
+        "Year" : 1995,
+        "Money" : "$10157.56"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90928"),
+        "Title" : "Rhapsody in Blue",
+        "Type" : "Drama|Musical",
+        "Country" : "Morocco",
+        "Year" : 1991,
+        "Money" : "$17792.69"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092f"),
+        "Title" : "Kings of Recycling (Kierrätyksen kuninkaat)",
+        "Type" : "Documentary",
+        "Country" : "South Korea",
+        "Year" : 1995,
+        "Money" : "$17417.28"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90930"),
+        "Title" : "Film with Me in It, A",
+        "Type" : "Comedy|Thriller",
+        "Country" : "France",
+        "Year" : 1960,
+        "Money" : "$15615.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90931"),
+        "Title" : "Block-Heads",
+        "Type" : "Comedy|War",
+        "Country" : "Nigeria",
+        "Year" : 1990,
+        "Money" : "$14400.12"
+}
+Type "it" for more
+> db.movie.find({$and:[{Year:{$lt:2000}},{Money:{$lt:"$10000"}}]}).pretty()
+>
+> db.movie.find({$and:[{Year:{$lt:2000}},{Money:{$lt:"$18000"}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090c"),
+        "Title" : "One of Our Dinosaurs Is Missing",
+        "Type" : "Adventure|Comedy",
+        "Country" : "Guinea-Bissau",
+        "Year" : 1999,
+        "Money" : "$17009.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090f"),
+        "Title" : "East of Eden",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 1999,
+        "Money" : "$13252.01"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90914"),
+        "Title" : "Mating of Millie, The",
+        "Type" : "Comedy|Romance",
+        "Country" : "China",
+        "Year" : 1985,
+        "Money" : "$17039.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90915"),
+        "Title" : "Can't Buy Me Love",
+        "Type" : "Comedy|Romance",
+        "Country" : "Iran",
+        "Year" : 1985,
+        "Money" : "$16336.11"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90918"),
+        "Title" : "Dreaming of Joseph Lees",
+        "Type" : "Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1981,
+        "Money" : "$14335.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90919"),
+        "Title" : "Other Sister, The",
+        "Type" : "Comedy|Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1976,
+        "Money" : "$15058.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091a"),
+        "Title" : "7th Heaven (Seventh Heaven)",
+        "Type" : "Drama|Romance",
+        "Country" : "Kazakhstan",
+        "Year" : 1996,
+        "Money" : "$17269.99"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091c"),
+        "Title" : "Anita",
+        "Type" : "Documentary",
+        "Country" : "Saudi Arabia",
+        "Year" : 1997,
+        "Money" : "$14487.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091d"),
+        "Title" : "Pretty Woman",
+        "Type" : "Comedy|Romance",
+        "Country" : "Indonesia",
+        "Year" : 1994,
+        "Money" : "$15496.89"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90920"),
+        "Title" : "Escape from Planet Earth",
+        "Type" : "Adventure|Animation|Comedy|Sci-Fi",
+        "Country" : "France",
+        "Year" : 1995,
+        "Money" : "$14696.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90923"),
+        "Title" : "It's the Easter Beagle, Charlie Brown!",
+        "Type" : "Animation|Children|Comedy",
+        "Country" : "Cambodia",
+        "Year" : 1995,
+        "Money" : "$15813.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90926"),
+        "Title" : "The Italian Connection",
+        "Type" : "Crime|Drama",
+        "Country" : "Brazil",
+        "Year" : 1995,
+        "Money" : "$10157.56"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90928"),
+        "Title" : "Rhapsody in Blue",
+        "Type" : "Drama|Musical",
+        "Country" : "Morocco",
+        "Year" : 1991,
+        "Money" : "$17792.69"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092f"),
+        "Title" : "Kings of Recycling (Kierrätyksen kuninkaat)",
+        "Type" : "Documentary",
+        "Country" : "South Korea",
+        "Year" : 1995,
+        "Money" : "$17417.28"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90930"),
+        "Title" : "Film with Me in It, A",
+        "Type" : "Comedy|Thriller",
+        "Country" : "France",
+        "Year" : 1960,
+        "Money" : "$15615.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90931"),
+        "Title" : "Block-Heads",
+        "Type" : "Comedy|War",
+        "Country" : "Nigeria",
+        "Year" : 1990,
+        "Money" : "$14400.12"
+}
+Type "it" for more
+> db.movie.find({$and:[{Year:{$lt:2000}},{Money:{$lt:"$10000"}}]}).pretty()
+> db.movie.find({$and:[{Year:{$lt:2000}},{Money:{$lt:"$18000"}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090c"),
+        "Title" : "One of Our Dinosaurs Is Missing",
+        "Type" : "Adventure|Comedy",
+        "Country" : "Guinea-Bissau",
+        "Year" : 1999,
+        "Money" : "$17009.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090f"),
+        "Title" : "East of Eden",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 1999,
+        "Money" : "$13252.01"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90914"),
+        "Title" : "Mating of Millie, The",
+        "Type" : "Comedy|Romance",
+        "Country" : "China",
+        "Year" : 1985,
+        "Money" : "$17039.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90915"),
+        "Title" : "Can't Buy Me Love",
+        "Type" : "Comedy|Romance",
+        "Country" : "Iran",
+        "Year" : 1985,
+        "Money" : "$16336.11"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90918"),
+        "Title" : "Dreaming of Joseph Lees",
+        "Type" : "Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1981,
+        "Money" : "$14335.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90919"),
+        "Title" : "Other Sister, The",
+        "Type" : "Comedy|Drama|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 1976,
+        "Money" : "$15058.47"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091a"),
+        "Title" : "7th Heaven (Seventh Heaven)",
+        "Type" : "Drama|Romance",
+        "Country" : "Kazakhstan",
+        "Year" : 1996,
+        "Money" : "$17269.99"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091c"),
+        "Title" : "Anita",
+        "Type" : "Documentary",
+        "Country" : "Saudi Arabia",
+        "Year" : 1997,
+        "Money" : "$14487.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9091d"),
+        "Title" : "Pretty Woman",
+        "Type" : "Comedy|Romance",
+        "Country" : "Indonesia",
+        "Year" : 1994,
+        "Money" : "$15496.89"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90920"),
+        "Title" : "Escape from Planet Earth",
+        "Type" : "Adventure|Animation|Comedy|Sci-Fi",
+        "Country" : "France",
+        "Year" : 1995,
+        "Money" : "$14696.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90923"),
+        "Title" : "It's the Easter Beagle, Charlie Brown!",
+        "Type" : "Animation|Children|Comedy",
+        "Country" : "Cambodia",
+        "Year" : 1995,
+        "Money" : "$15813.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90926"),
+        "Title" : "The Italian Connection",
+        "Type" : "Crime|Drama",
+        "Country" : "Brazil",
+        "Year" : 1995,
+        "Money" : "$10157.56"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90928"),
+        "Title" : "Rhapsody in Blue",
+        "Type" : "Drama|Musical",
+        "Country" : "Morocco",
+        "Year" : 1991,
+        "Money" : "$17792.69"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9092f"),
+        "Title" : "Kings of Recycling (Kierrätyksen kuninkaat)",
+        "Type" : "Documentary",
+        "Country" : "South Korea",
+        "Year" : 1995,
+        "Money" : "$17417.28"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90930"),
+        "Title" : "Film with Me in It, A",
+        "Type" : "Comedy|Thriller",
+        "Country" : "France",
+        "Year" : 1960,
+        "Money" : "$15615.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90931"),
+        "Title" : "Block-Heads",
+        "Type" : "Comedy|War",
+        "Country" : "Nigeria",
+        "Year" : 1990,
+        "Money" : "$14400.12"
+}
+Type "it" for more
+> db.movie.find({$or:[{Year:{$not:{$eq:2000}}},{Money:{$not:{$eq:"$18000"}}}]}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f7"),
+        "Title" : "Soul Food",
+        "Type" : "Drama",
+        "Country" : "Mexico",
+        "Year" : 2002,
+        "Money" : "$12841.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fc"),
+        "Title" : "Carnegie Hall",
+        "Type" : "Drama",
+        "Country" : "Portugal",
+        "Year" : 2007,
+        "Money" : "$15366.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fe"),
+        "Title" : "Dragonball Evolution",
+        "Type" : "Action|Adventure|Fantasy|Sci-Fi",
+        "Country" : "Liberia",
+        "Year" : 1993,
+        "Money" : "$18906.76"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90900"),
+        "Title" : "Young & Beautiful",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$18052.36"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90901"),
+        "Title" : "Leaving Normal",
+        "Type" : "Comedy|Drama",
+        "Country" : "Russia",
+        "Year" : 1996,
+        "Money" : "$18440.72"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90902"),
+        "Title" : "Fade To Black",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17886.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90903"),
+        "Title" : "Sweet Bird of Youth",
+        "Type" : "Drama",
+        "Country" : "Japan",
+        "Year" : 1995,
+        "Money" : "$18941.16"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90904"),
+        "Title" : "Jay and Silent Bob Strike Back",
+        "Type" : "Adventure|Comedy",
+        "Country" : "China",
+        "Year" : 2008,
+        "Money" : "$11432.29"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90906"),
+        "Title" : "7 Seconds",
+        "Type" : "Action|Crime|Thriller",
+        "Country" : "Azerbaijan",
+        "Year" : 2008,
+        "Money" : "$18885.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90907"),
+        "Title" : "101 Dalmatians II: Patch's London Adventure",
+        "Type" : "Animation|Children",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$14715.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90908"),
+        "Title" : "Mummy: Tomb of the Dragon Emperor, The",
+        "Type" : "Action|Adventure|Fantasy|Thriller",
+        "Country" : "Chad",
+        "Year" : 2008,
+        "Money" : "$18220.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90909"),
+        "Title" : "Fury",
+        "Type" : "Action|Drama|War",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17248.02"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+Type "it" for more
+> db.movie.find({$or:[{}).limit(10).pretty()
+... ^C
+
+> db.movie.find({}).limit(10).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f7"),
+        "Title" : "Soul Food",
+        "Type" : "Drama",
+        "Country" : "Mexico",
+        "Year" : 2002,
+        "Money" : "$12841.37"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f8"),
+        "Title" : "The Mysterious Island",
+        "Type" : "Adventure|Sci-Fi",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$14288.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908f9"),
+        "Title" : "American Werewolf in London, An",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "United States",
+        "Year" : 1997,
+        "Money" : "$13155.32"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fa"),
+        "Title" : "Hands of Orlac, The (Orlacs Hände)",
+        "Type" : "Crime|Horror",
+        "Country" : "China",
+        "Year" : 2004,
+        "Money" : "$9388.90"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fb"),
+        "Title" : "There's No Business Like Show Business",
+        "Type" : "Musical",
+        "Country" : "Syria",
+        "Year" : 1992,
+        "Money" : "$15448.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fc"),
+        "Title" : "Carnegie Hall",
+        "Type" : "Drama",
+        "Country" : "Portugal",
+        "Year" : 2007,
+        "Money" : "$15366.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fe"),
+        "Title" : "Dragonball Evolution",
+        "Type" : "Action|Adventure|Fantasy|Sci-Fi",
+        "Country" : "Liberia",
+        "Year" : 1993,
+        "Money" : "$18906.76"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908ff"),
+        "Title" : "Running Scared",
+        "Type" : "Action|Comedy",
+        "Country" : "China",
+        "Year" : 2001,
+        "Money" : "$9306.39"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90900"),
+        "Title" : "Young & Beautiful",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 1994,
+        "Money" : "$18052.36"
+}
+> db.movie.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90901"),
+        "Title" : "Leaving Normal",
+        "Type" : "Comedy|Drama",
+        "Country" : "Russia",
+        "Year" : 1996,
+        "Money" : "$18440.72"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90902"),
+        "Title" : "Fade To Black",
+        "Type" : "Comedy|Horror|Thriller",
+        "Country" : "Indonesia",
+        "Year" : 2009,
+        "Money" : "$17886.79"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90903"),
+        "Title" : "Sweet Bird of Youth",
+        "Type" : "Drama",
+        "Country" : "Japan",
+        "Year" : 1995,
+        "Money" : "$18941.16"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90904"),
+        "Title" : "Jay and Silent Bob Strike Back",
+        "Type" : "Adventure|Comedy",
+        "Country" : "China",
+        "Year" : 2008,
+        "Money" : "$11432.29"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90905"),
+        "Title" : "Red Corner",
+        "Type" : "Crime|Thriller",
+        "Country" : "Philippines",
+        "Year" : 1972,
+        "Money" : "$14909.12"
+}
+> db.movie.find({}).sort({Year:-1},{Title:-1}).pretty()
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90907"),
+        "Title" : "101 Dalmatians II: Patch's London Adventure",
+        "Type" : "Animation|Children",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$14715.92"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9094d"),
+        "Title" : "Haaveiden kehä",
+        "Type" : "Drama",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$15261.54"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90a9a"),
+        "Title" : "Legend of Lizzie Borden, The",
+        "Type" : "Drama",
+        "Country" : "Poland",
+        "Year" : 2013,
+        "Money" : "$15473.34"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90aab"),
+        "Title" : "Slipper and the Rose, The",
+        "Type" : "Adventure|Musical|Romance",
+        "Country" : "Czech Republic",
+        "Year" : 2013,
+        "Money" : "$18286.67"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90b2b"),
+        "Title" : "The Vanishing American",
+        "Type" : "Western",
+        "Country" : "Russia",
+        "Year" : 2013,
+        "Money" : "$12952.10"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90b2d"),
+        "Title" : "Joint Security Area (Gongdong gyeongbi guyeok JSA)",
+        "Type" : "Crime|Drama|Mystery|Thriller|War",
+        "Country" : "Russia",
+        "Year" : 2013,
+        "Money" : "$12971.96"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90b81"),
+        "Title" : "Telstar: The Joe Meek Story",
+        "Type" : "Comedy|Drama",
+        "Country" : "Mexico",
+        "Year" : 2013,
+        "Money" : "$13047.44"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90b83"),
+        "Title" : "Professor Layton and the Eternal Diva (Eiga Reiton-kyôju to eien no utahime)",
+        "Type" : "Action|Adventure|Animation|Mystery|Sci-Fi",
+        "Country" : "Brazil",
+        "Year" : 2013,
+        "Money" : "$10953.59"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90bc1"),
+        "Title" : "You Again",
+        "Type" : "Comedy",
+        "Country" : "China",
+        "Year" : 2013,
+        "Money" : "$19820.81"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90cc8"),
+        "Title" : "Canal, The",
+        "Type" : "Horror|Thriller",
+        "Country" : "China",
+        "Year" : 2013,
+        "Money" : "$19844.96"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c908fd"),
+        "Title" : "Nothing Personal",
+        "Type" : "Drama",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$9286.04"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9090a"),
+        "Title" : "Zach Galifianakis: Live at the Purple Onion",
+        "Type" : "Comedy|Documentary",
+        "Country" : "Peru",
+        "Year" : 2012,
+        "Money" : "$18798.50"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90922"),
+        "Title" : "Desirée",
+        "Type" : "Drama|Romance",
+        "Country" : "Thailand",
+        "Year" : 2012,
+        "Money" : "$19486.95"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9093a"),
+        "Title" : "American Heist",
+        "Type" : "Action",
+        "Country" : "Japan",
+        "Year" : 2012,
+        "Money" : "$16312.34"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9093f"),
+        "Title" : "Macario",
+        "Type" : "Drama|Fantasy|Mystery",
+        "Country" : "China",
+        "Year" : 2012,
+        "Money" : "$15922.31"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90955"),
+        "Title" : "Operation Pacific",
+        "Type" : "Drama|War",
+        "Country" : "Portugal",
+        "Year" : 2012,
+        "Money" : "$19400.61"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c90959"),
+        "Title" : "Django 2: Django Strikes Again",
+        "Type" : "Western",
+        "Country" : "United States",
+        "Year" : 2012,
+        "Money" : "$16474.94"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c9098d"),
+        "Title" : "Nayak: The Hero",
+        "Type" : "Drama",
+        "Country" : "China",
+        "Year" : 2012,
+        "Money" : "$12949.20"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c909b4"),
+        "Title" : "The Land Before Time IX: Journey to the Big Water",
+        "Type" : "Adventure|Animation|Children",
+        "Country" : "Brazil",
+        "Year" : 2012,
+        "Money" : "$10371.60"
+}
+{
+        "_id" : ObjectId("62285bd3607b7cbb94c909c4"),
+        "Title" : "Thirty-Nine Steps, The",
+        "Type" : "Crime|Mystery|Thriller",
+        "Country" : "Bangladesh",
+        "Year" : 2012,
+        "Money" : "$19559.64"
+}
+Type "it" for more
+>
